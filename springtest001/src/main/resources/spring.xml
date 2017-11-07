@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<bean id="person" class="com.jiangkai.test.SpringMavenTest.beans.Person"
+		scope="prototype" lazy-init="true" />
+	<!-- 这里出现了两个属性，scope和lazy-init： 
+	1、scope表示的是bean的作用域，有prototype、request、session、singleton四种，其中singleton是默认的，
+	表示单例。prototype表示每次创建都会产生一个bean实例。request和session只在web项目中才会用，其作用域就和web中
+	的request和session一样 
+	2、lazy-init表示的是bean的生命周期，默认为false。当scope=singleton时，bean会在装在配置文件时实例化，如果
+	希望bean在产生时才实例化，可以把lazy-init设置为true。当scope=prototype时，在产生bean时才会实例化它。补充一
+	点，如果希望该配置文件中所有的bean都延迟初始化，则应该在beans根节点中使用lazy-init="true" -->
+
+
+
+</beans>
